@@ -17,6 +17,7 @@ class User: MongoDBStORM {
     var password        : String = ""
 	var name		    : String = ""
 	var phone			: String = ""
+    var contactOf       : String = ""
 
 
 	// The name of the database table
@@ -28,11 +29,12 @@ class User: MongoDBStORM {
 
 	// The mapping that translates the database info back to the object
 	override func to(_ this: StORMRow) {
-		id				= this.data["_id"] as? String			?? ""
-		username		= this.data["username"] as? String		?? ""
-        password        = this.data["password"] as? String      ?? ""
-		name		    = this.data["name"] as? String		    ?? ""
-		phone			= this.data["phone"] as? String			?? ""
+		id				= this.data["_id"]       as? String		   ?? ""
+		username		= this.data["username"]  as? String		   ?? ""
+        password        = this.data["password"]  as? String        ?? ""
+		name		    = this.data["name"]      as? String		   ?? ""
+		phone			= this.data["phone"]     as? String		   ?? ""
+        contactOf       = this.data["contactOf"] as? String        ?? ""
 	}
 
 }

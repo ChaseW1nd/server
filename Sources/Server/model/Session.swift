@@ -25,7 +25,7 @@ class Session: MongoDBStORM {
     
     // The mapping that translates the database info back to the object
     override func to(_ this: StORMRow) {
-        sessionId        = this.data["_sessionId"] as? String        ?? ""
+        sessionId        = this.data["_id"] as? String        ?? ""
         userId           = this.data["userId"] as? String            ?? ""
     }
     

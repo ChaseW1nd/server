@@ -10,7 +10,7 @@ import StORM
 import MongoDBStORM
 
 
-func saveNew(username:String,password:String,name:String,phone:String) throws -> User {
+func saveNew(username:String,password:String,name:String,phone:String) throws -> () {
 
 	let obj = User()
 	obj.id = obj.newUUID()
@@ -27,7 +27,6 @@ func saveNew(username:String,password:String,name:String,phone:String) throws ->
 	}
 
 	print("'saveNew' - Object created with new id of \(obj.id)")
-	return obj
 }
 
 func login(username:String,password:String) -> Bool{
