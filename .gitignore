@@ -1,2 +1,11 @@
 .build
 Package.resolved
+Server.xcodeproj
+webroot
+config
+*.log
+*.sh
+libhandle.so.1
+clang++
+clang-3.8
+README.rst
